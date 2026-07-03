@@ -1,0 +1,50 @@
+# ===== Terraform =====
+
+# Arquivos de state - CONTÊM DADOS SENSÍVEIS (IDs, atributos de recursos, às vezes segredos)
+# NUNCA suba isso pro GitHub
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Diretório de cache/plugins do Terraform - gerado localmente, não precisa versionar
+.terraform/
+.terraform.lock.hcl
+
+# Arquivos de plano - podem conter dados sensíveis do ambiente
+*.tfplan
+*.plan
+
+# Variáveis com valores reais (subscription id, secrets, etc.)
+# Suba só um .tfvars.example como modelo, nunca o .tfvars real
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Logs de execução do Terraform (debug)
+crash.log
+crash.*.log
+
+# Override files (usados só localmente para testes, nunca versionar)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ===== Credenciais e segredos gerais =====
+*.pem
+*.key
+*.pfx
+.env
+.env.local
+
+# ===== Azure CLI =====
+.azure/
+
+# ===== Sistema Operacional =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+.idea/
+*.swp
