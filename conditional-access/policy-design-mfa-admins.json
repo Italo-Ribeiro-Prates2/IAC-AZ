@@ -1,0 +1,17 @@
+{
+  "displayName": "Require MFA for Admin Roles",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "users": {
+      "includeRoles": ["Global Administrator", "User Administrator"]
+    },
+    "applications": {
+      "includeApplications": ["All"]
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": ["mfa"]
+  },
+  "_note": "Este arquivo e um DESENHO de politica, nao uma politica ativa. O ambiente utilizado (Entra ID Free) nao suporta Conditional Access, que exige licenciamento P1. Como equivalente, foi habilitado o Security Defaults do tenant."
+}
